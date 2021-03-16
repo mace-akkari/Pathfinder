@@ -43,3 +43,16 @@ A0 FF 44 F1
 // Animation
 
 // http://ascii-table.com
+
+// Example of doing properly in JS
+
+const hex = (42).toString(16);
+const dec = parseInt("FF", 16);
+
+const characterCode = "a".charCodeAt(0);
+const characterFrom = String.fromCharCode(1);
+
+console.log(characterCode);
+console.log(characterFrom);
+console.log(hex);
+console.log(dec);
