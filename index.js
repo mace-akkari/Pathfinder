@@ -46,12 +46,15 @@
 // Animation
 
 const testMessage = "48656C6C6F";
-let message = [];
+let hex = [];
 
 for (let i = 0; i < testMessage.length; i +=2) {
-  message.push(testMessage.slice(i, i + 2));
+  hex.push(testMessage.slice(i, i + 2));
 }
-console.log(message);
+
+const decimals = hex.map((x) => parseInt(x ,16));
+
+console.log(decimals);
 
 
 
@@ -59,7 +62,7 @@ console.log(message);
 
 // Example of doing properly in JS
 
-const hex = (42).toString(16);
+//const hex = (42).toString(16);
 const dec = parseInt("FF", 16);
 
 const characterCode = "a".charCodeAt(0);
