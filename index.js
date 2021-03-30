@@ -53,8 +53,9 @@ for (let i = 0; i < testMessage.length; i +=2) {
 }
 
 const decimals = hex.map((x) => parseInt(x ,16));
+const message = decimals.map((x) => String.fromCharCode(x)).join("");
 
-console.log(decimals);
+console.log(message);
 
 
 
