@@ -10,12 +10,21 @@ describe("hex library", () => {
       
       expect(output).toBe(expected);
     });
-    it("when an invalid hex value is enterted it returns NaN", () => {
+    it("when a valid double digit zero padded hex value it returns a decimal conversion ", () => {
+      const input = "0D";
+      const output = hexToDec(input);
+      const expected = 13;
+
+      expect(output).toBe(expected);
+    });
+
+    it("when a single hex value is enterted it returns NaN", () => {
       const input = "C";
       const output = hexToDec(input);
       const expected = NaN;
 
       expect(output).toBe(expected);
     });
+    it.todo("when an invalid hex value is enterted it returns NaN");
   });
 });
