@@ -10,5 +10,8 @@ describe("hex library", () => {
       
       expect(output).toBe(expected);
     });
+    it("when an invalid hex value is enterted it returns NaN", () => {
+      
+    });
   });
 });
