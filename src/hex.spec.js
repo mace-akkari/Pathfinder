@@ -25,6 +25,14 @@ describe("hex library", () => {
 
       expect(output).toBe(expected);
     });
-    it.todo("when an invalid hex value is enterted it returns NaN");
+
+    it("when an invalid hex value is enterted it returns NaN", () => {
+      const input = "AZ";
+      const output = hexToDec(input);
+      const expected = NaN;
+
+      expect(output).toBe(expected);
+    });
+     
   });
 });
