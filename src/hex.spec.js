@@ -33,6 +33,13 @@ describe("hex library", () => {
 
       expect(output).toBe(expected);
     });
-     
+
+    it("when a larger than two digit value is entered it returns NaN", () => {
+      const input = "AAAAAA";
+      const output = hexToDec(input);
+      const expected = NaN;
+
+      expect(output).toBe(expected);
+    })
   });
 });
