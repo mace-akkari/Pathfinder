@@ -1,4 +1,4 @@
-import {hexToDec} from "./hex";
+import {hexToDec, hexToASCIIString} from "./hex";
 
 
 describe("hex library", () => {
