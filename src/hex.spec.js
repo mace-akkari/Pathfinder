@@ -43,3 +43,21 @@ describe("hex library", () => {
     })
   });
 });
+
+describe("hexToASCIIString", () => {
+  it("throws if the string isn't valid byte length", () => {
+    const input = "CDC";
+    expect(() => {
+      hexToASCIIString(input);
+    }).toThrow("Hex dosen't represent a valid string (invalid byte length)")
+  });
+  it("translates a hex number into a string", () => {
+    const input = "48656C6C6F";
+    const output = hexToASCIIString(input);
+    const expected = "Hello";
+
+    expect(output).toBe(expected);
+  })
+
+
+})
