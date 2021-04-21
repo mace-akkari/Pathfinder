@@ -10,3 +10,12 @@ export function hexToDec(hex){
   }
   return parseInt(hex, 16);
 }
+
+export function hexToASCIIString(hex) {
+  const isOdd = hex.length % 2;
+  if(isOdd) {
+    throw new Error(
+      "Hex dosen't represent a valid string (invalid byte length)"
+    );
+  }
+}
