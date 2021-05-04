@@ -15,4 +15,9 @@ The hexadecimal system is comprised of 16 symbols: 0-9 and A-F.
 
 ```
 
-### In this project I will try and recreate the Pathfinder scene 
+## In this project I will try and recreate the Pathfinder scene 
+
+### Languages used:
+```
+This project was written in JavaScript and tested using Jest
+```
