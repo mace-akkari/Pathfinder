@@ -57,7 +57,8 @@ describe("hexToASCIIString", () => {
     const expected = "Hello";
 
     expect(output).toBe(expected);
-  })
-
+  });
+  it.todo("throws an error  if the hex is invalid");
+  it.todo("returns an empty string on empty input");
 
 })
