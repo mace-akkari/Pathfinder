@@ -58,7 +58,16 @@ describe("hexToASCIIString", () => {
 
     expect(output).toBe(expected);
   });
-  it.todo("throws an error  if the hex is invalid");
+  it("throws an error  if the hex is invalid", () => {
+    const input = "48@56C6CZF";
+    const output = hexToASCIIString(input);
+    const expected = "Hello";
+
+    expect(() => {
+      hexToASCIIString(input);
+    }).toThrow("Submitted hex is not valid")
+
+  });
   it.todo("returns an empty string on empty input");
 
 })
