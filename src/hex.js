@@ -11,19 +11,26 @@ export function hexToDec(hex){
   return parseInt(hex, 16);
 }
 
-export function hexToASCIIString(hex) {
+export function hexToASCIIString(hex = " ") {
   const isOdd = hex.length % 2;
   if(isOdd) {
     throw new Error(
       "Hex dosen't represent a valid string (invalid byte length)"
     );
   }
+
   const bytes = [];
   for(let i = 0; i < hex.length; i += 2) {
     bytes.push(hex.slice(i, i +2));
   }
 
-  const decimals = bytes.map((byte) => hexToDec(byte));
+  const decimals = bytes.map((byte) => {
+    const result = hexToDec(byte);
+    if (isNaN(result)) {
+      throw new Error("Submitted hex is not valid")
+    }
+    return result;
+  }); 
   const message = decimals.map((decimal) => String.fromCharCode(decimal)).join("");
 
   return message;
