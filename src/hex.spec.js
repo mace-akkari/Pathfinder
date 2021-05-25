@@ -58,16 +58,18 @@ describe("hexToASCIIString", () => {
 
     expect(output).toBe(expected);
   });
-  it("throws an error  if the hex is invalid", () => {
+  it("throws an error if the hex is invalid", () => {
     const input = "48@56C6CZF";
-    const output = hexToASCIIString(input);
-    const expected = "Hello";
 
     expect(() => {
       hexToASCIIString(input);
-    }).toThrow("Submitted hex is not valid")
-
+    }).toThrow("Submitted hex is not valid");
   });
-  it.todo("returns an empty string on empty input");
+  it("returns an empty string on empty input", () => {
+    const input = " ";
+    const output = hexToDec(input);
+
+    expect(output).toBeNaN();
+  });
 
 })
